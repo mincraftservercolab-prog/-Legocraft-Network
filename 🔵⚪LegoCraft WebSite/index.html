@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LegoCraft Network - Premium Minecraft Server Experience">
+  <meta name="keywords" content="minecraft, server, gaming, legocraft, multiplayer">
+  
+  <!-- Background and Theme Meta Tags -->
+  <meta name="theme-color" content="#ff6b35">
+  <meta property="og:image" content="images/background.jpg">
+  
+  <!-- Preload background image for better performance -->
+  <link rel="preload" href="images/background.jpg" as="image">
+  
+  <title>LegoCraft Network - Premium Minecraft Server</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="scripts/main.js" as="script">
+</head>
+<body>
+  <div class="particles-container" id="particles-js"></div>
+  <div class="scanline"></div>
+  
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-wrapper">
+        <img src="images/logo.png" alt="LegoCraft Logo" class="logo" />
+        <div class="logo-glow"></div>
+      </div>
+      <h1 class="glow-text">LegoCraft</h1>
+    </div>
+    
+    <nav class="main-nav">
+      <a href="#server-info" class="nav-link">
+        <span class="nav-icon">🔒</span>
+        <span class="nav-text">IP: play.legocraft.net</span>
+      </a>
+      <a href="#store" class="nav-link">
+        <span class="nav-icon">🛒</span>
+        <span class="nav-text">LegoSteel Store ⚔</span>
+      </a>
+      <a href="#survival-store" class="nav-link">
+        <span class="nav-icon">🎍</span>
+        <span class="nav-text">LegoSurvival Store</span>
+      </a>
+      <a href="#hosting" class="nav-link">
+        <span class="nav-icon">✅</span>
+        <span class="nav-text">Server Hosting Plans</span>
+      </a>
+      <a href="#vote" class="nav-link">
+        <span class="nav-icon">🍔</span>
+        <span class="nav-text">LegoCraft Vote</span>
+      </a>
+    </nav>
+    
+    <div class="header-controls">
+      <div class="auth-box">
+        <span id="userDisplay" class="username">👤 Guest</span>
+        <button class="solar-btn" onclick="window.open('https://discord.gg/legocraft', '_blank')">
+          <span class="btn-icon">💬</span>
+          Discord
+        </button>
+      </div>
+
+      <div class="theme-toggle">
+        <label class="theme-switch">
+          <input type="checkbox" id="themeSwitch" />
+          <span class="slider"></span>
+          <span class="theme-icon">🌙</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-content">
+        <h2 class="hero-title">
+          <span class="title-accent">📘</span>LegoCraft.Net
+        </h2>
+        <p class="hero-description">
+          High-performance Minecraft server with complete customization, cross-platform Java & Bedrock support, and an active developer community.
+        </p>
+        <div class="cta-buttons">
+          <button class="cta-primary" onclick="copyIP()">🍪Join Now</button>
+          <button class="cta-secondary" onclick="scrollToSection('features')">📚Explore US!</button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="minecraft-player">
+          <img src="images/character.png" alt="Minecraft Character" class="player-render" />
+          <div class="player-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+      <div class="section-header">
+        <h2>About Our Server</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-content">
+        <p>LegoCraft is a premium Minecraft experience built for gamers by developers. Our server combines cutting-edge performance with deep customization options, allowing players to enjoy Minecraft in entirely new ways.</p>
+        
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value" data-count="99">0</div>
+            <div class="stat-label">Uptime %</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" data-count="2025">0</div>
+            <div class="stat-label">MAX Players</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" data-count="24">0</div>
+            <div class="stat-label">/7 Support</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" data-count="100">0</div>
+            <div class="stat-label">🌲Players
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="content-section">
+      <div class="section-header">
+        <h2>Server Features</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3>Cross-Platform</h3>
+          <p>Java & Bedrock players can play together seamlessly with our advanced bridging technology.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>High Performance</h3>
+          <p>Optimized server infrastructure ensures smooth gameplay even with hundreds of players online.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛑</div>
+          <h3>Custom Addons</h3>
+          <p>Exclusive custom addons created by our development team for unique gameplay experiences.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Rank System</h3>
+          <p>Progressive ranking system with seasonal tags and exclusive rewards for dedicated players.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Security</h3>
+          <p>Advanced anti-cheat and moderation tools keep the gameplay fair and enjoyable for everyone.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Always Updated</h3>
+          <p>Regular content updates and seasonal events keep the gameplay fresh and exciting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="content-section roleplay-section">
+      <div class="section-header roleplay-header">
+        <h2>Server Leadership Team</h2>
+        <div class="section-divider roleplay-divider"></div>
+      </div>
+      
+      <div class="roleplay-cards">
+  <!-- Admin Card -->
+        <div class="roleplay-card">
+          <div class="roleplay-card-header">
+            <div class="roleplay-icon admin-icon">
+              <span>🛡️</span>
+            </div>
+            <div>
+              <h3 class="roleplay-title admin-title">Server Founder – ArhamT</h3>
+              <p class="roleplay-subtitle">Lead Administrator & Community Manager</p>
+            </div>
+          </div>
+          
+          <div class="roleplay-content">
+            <p>Legocraft is powered by a high-performance infrastructure and a dedicated team, led by ArhamT, the server's Lead Administrator. With full access to advanced moderation tools and developer controls, Saad ensures the server remains secure, fair, and dynamic for all players.</p>
+            
+            <div class="roleplay-highlights">
+              <div class="highlight-item admin-highlight">
+                <div class="highlight-title">
+                  <span>⚡</span> Instant Moderation
+                </div>
+                <p class="highlight-desc">Saad Raza can ban disruptive players within seconds, always providing clear reasons aligned with server rules.</p>
+              </div>
+              
+              <div class="highlight-item admin-highlight">
+                <div class="highlight-title">
+                  <span>🏆</span> Rank Management
+                </div>
+                <p class="highlight-desc">Assigns ranks and seasonal tags based on player achievements, event participation, and contributions.</p>
+              </div>
+              
+              <div class="highlight-item admin-highlight">
+                <div class="highlight-title">
+                  <span>🔒</span> Security Enforcement
+                </div>
+                <p class="highlight-desc">Oversees anti-cheat systems and plugin-based moderation to prevent exploits and unfair gameplay.</p>
+              </div>
+              
+              <div class="highlight-item admin-highlight">
+                <div class="highlight-title">
+                  <span>🎉</span> Event Oversight
+                </div>
+                <p class="highlight-desc">Coordinates seasonal events, updates, and community challenges to keep the server engaging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+<!-- Developer Card -->
+        <div class="roleplay-card">
+          <div class="roleplay-card-header">
+            <div class="roleplay-icon developer-icon">
+              <span>⚙️</span>
+            </div>
+            <div>
+              <h3 class="roleplay-title developer-title">Admin  – AmmarAsif</h3>
+              <p class="roleplay-subtitle">Technical Architect & Plugin Developer</p>
+            </div>
+          </div>
+          
+          <div class="roleplay-content">
+            <p>Ammar is the visionary developer behind legocraft , a high-performance Minecraft server built for scalability, creativity, and cross-platform gameplay. With deep expertise in plugin development and server optimization, Ammar transforms Minecraft into a fully immersive experience.</p>
+            
+            <div class="roleplay-highlights">
+              <div class="highlight-item developer-highlight">
+                <div class="highlight-title">
+                  <span>🔌</span> Custom Plugin Architecture
+                </div>
+                <p class="highlight-desc">Designs and maintains over 100 custom plugins that power gameplay mechanics and moderation tools.</p>
+              </div>
+              
+              <div class="highlight-item developer-highlight">
+                <div class="highlight-title">
+                  <span>🌐</span> Cross-Platform Integration
+                </div>
+                <p class="highlight-desc">Engineered seamless compatibility between Java and Bedrock editions using bridging technology.</p>
+              </div>
+              
+              <div class="highlight-item developer-highlight">
+                <div class="highlight-title">
+                  <span>🚀</span> Performance Optimization
+                </div>
+                <p class="highlight-desc">Built robust infrastructure supporting thousands of concurrent players with 99% uptime.</p>
+              </div>
+              
+              <div class="highlight-item developer-highlight">
+                <div class="highlight-title">
+                  <span>🔐</span> Security Engineering
+                </div>
+                <p class="highlight-desc">Implements anti-cheat systems, permission hierarchies, and backend protections.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Developer Card with Photo -->
+<div class="roleplay-card">
+  <div class="roleplay-card-header">
+    <div class="roleplay-icon developer-icon">
+      <!-- Your Photo Here -->
+      <img src="images/" alt="pic" class="developer-photo">
+      <div class="photo-glow"></div>
+    </div>
+    <div>
+      <h3 class="roleplay-title developer-title">Uncle – MRT</h3>
+      <p class="roleplay-subtitle">Full-Stack Visionary & Digital Alchemist</p>
+      <div class="expert-badge">
+        <span class="badge-icon">🌟</span>
+        MASTER DEVELOPER
+      </div>
+    </div>
+  </div>
+  
+  <div class="roleplay-content">
+    <div class="developer-intro">
+      <p>MRT is the master architect behind Legocraft, operating at the pinnacle of Minecraft server development. A singular visionary responsible for the entire digital ecosystem you're experiencing.</p>
+      
+      <div class="achievement-message">
+        <div class="achievement-header">
+          <span class="trophy-icon">🏆</span>
+          <span>ELITE DEVELOPMENT CREDENTIALS</span>
+        </div>
+        <div class="status-animation">
+          <span class="status-dot"></span>
+          <span class="status-dot"></span>
+          <span class="status-dot"></span>
+          <span>All systems operational...</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mastery-grid">
+      <div class="mastery-category">
+        <h4 class="mastery-title">Technical Mastery</h4>
+        <div class="skills-list">
+          <div class="skill-item" data-skill="100">
+            <span class="skill-name">Server Architecture</span>
+            <div class="skill-bar">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-skill="95">
+            <span class="skill-name">Plugin Development</span>
+            <div class="skill-bar">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-skill="90">
+            <span class="skill-name">Security Systems</span>
+            <div class="skill-bar">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mastery-category">
+        <h4 class="mastery-title">Creative Excellence</h4>
+        <div class="skills-list">
+          <div class="skill-item" data-skill="85">
+            <span class="skill-name">UI/UX Design</span>
+            <div class="skill-bar">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-skill="80">
+            <span class="skill-name">3D Modeling</span>
+            <div class="skill-bar">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-skill="75">
+            <span class="skill-name">Digital Art</span>
+            <div class="skill-bar">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="roleplay-highlights">
+      <div class="highlight-item developer-highlight">
+        <div class="highlight-title">
+          <span>🌌</span> Omnipotent Development
+        </div>
+        <p class="highlight-desc">Single-handedly architects the entire server infrastructure, from backend systems to frontend interfaces.</p>
+      </div>
+      
+      <div class="highlight-item developer-highlight">
+        <div class="highlight-title">
+          <span>⚡</span> Universal Administration
+        </div>
+        <p class="highlight-desc">Maintains complete oversight of server operations, security protocols, and community management.</p>
+      </div>
+      
+      <div class="highlight-item developer-highlight">
+        <div class="highlight-title">
+          <span>🎨</span> Creative Visionary
+        </div>
+        <p class="highlight-desc">Designs immersive experiences, custom textures, and interactive elements that define the server's identity.</p>
+      </div>
+      
+      <div class="highlight-item developer-highlight">
+        <div class="highlight-title">
+          <span>🔮</span> Future Architect
+        </div>
+        <p class="highlight-desc">Continuously evolves the server with cutting-edge features and revolutionary gameplay mechanics.</p>
+      </div>
+    </div>
+    
+    <div class="developer-footnote">
+      <div class="developer-icon">💻</div>
+      <p>MRT combines technical expertise with creative vision to deliver an unparalleled Minecraft experience.</p>
+    </div>
+  </div>
+</div>
+
+    <!-- Join Section -->
+    <section id="join" class="content-section">
+      <div class="section-header">
+        <h2>Join Our Community</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="join-content">
+        <div class="server-info">
+          <p class="server-ip-label">Server IP Address:</p>
+          <p class="server-ip"><strong>play.legocraft.net</strong></p>
+          <button class="ip-copy-btn" onclick="copyIP()">
+            <span class="btn-icon">📋</span>
+            Copy IP Address
+          </button>
+        </div>
+        <div class="community-links">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://discord.gg/legocraft" target="_blank" class="social-link discord">
+              <span class="social-icon">💬</span>
+              Discord
+            </a>
+            <a href="https://youtube.com/legocraft" target="_blank" class="social-link youtube">
+              <span class="social-icon">📺</span>
+              YouTube
+            </a>
+            <a href="https://instagram.com/legocraft" target="_blank" class="social-link instagram">
+              <span class="social-icon">📷</span>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>LegoCraft Network</h3>
+        <p>Premium Minecraft server experience with cutting-edge features and an active community.</p>
+        <div class="footer-social">
+          <a href="https://discord.gg/legocraft" target="_blank" aria-label="Discord">💬</a>
+          <a href="https://youtube.com/legocraft" target="_blank" aria-label="YouTube">📺</a>
+          <a href="https://instagram.com/legocraft" target="_blank" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#join">Join Server</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Server Information</h3>
+        <p>This server is maintained by dedicated developers with a focus on providing the best Minecraft experience.</p>
+        <p>Contact us on Discord for support and inquiries.</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 LegoCraft Network. All rights reserved. "Minecraft" is a trademark of Mojang AB.</p>
+      <p>Thank you for playing with us! ❤️</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="scripts/particles.js"></script>
+  <script src="scripts/animations.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
