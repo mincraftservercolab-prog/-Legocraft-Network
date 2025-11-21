@@ -1,0 +1,23 @@
+{
+  "name": "legocraft-website",
+  "version": "1.0.0",
+  "description": "LegoCraft Network - Premium Minecraft Server Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "build": "echo 'Build process can be added here'",
+    "dev": "live-server --port=3000 --watch=styles,scripts,images"
+  },
+  "keywords": [
+    "minecraft",
+    "gaming",
+    "server",
+    "website",
+    "legocraft"
+  ],
+  "author": "LegoCraft Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LegoCraft Network - Premium Minecraft Server Experience">
+  <meta name="keywords" content="minecraft, server, gaming, legocraft, multiplayer">
+  
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:image" content="images/background.jpg">
+  
+  <link rel="preload" href="images/background.jpg" as="image">
+  <link rel="preload" href="styles/main.css" as="style">
+  
+  <title>LegoCraft - Premium Minecraft Server</title>
+  
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo-section">
+        <img src="images/logo.png" alt="LegoCraft Logo" class="logo" />
+        <div class="brand">LegoCraft</div>
+      </div>
+      
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#servers" class="nav-link">Servers</a></li>
+          <li><a href="#store" class="nav-link">Store</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
+        </ul>
+        
+        <div class="server-status">
+          <div class="status-dot"></div>
+          <span>1,247 Players Online</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <h1 class="hero-title">LegoCraft Network</h1>
+      <p class="hero-subtitle">
+        Experience the ultimate Minecraft adventure with premium servers, custom features, and an amazing community.
+      </p>
+      
+      <div class="cta-buttons">
+        <button class="cta-primary" onclick="copyIP()">
+          <span>🎮</span>
+          Join Server Now
+        </button>
+        <button class="cta-secondary" onclick="scrollToSection('features')">
+          <span>✨</span>
+          Explore Features
+        </button>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-number">99.9%</span>
+          <span class="stat-label">Uptime</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-number">2,025</span>
+          <span class="stat-label">Max Players</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Plugins</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Support</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="content-section">
+      <div class="section-header">
+        <h2>Why Choose LegoCraft?</h2>
+        <p class="section-subtitle">Premium features designed for the best Minecraft experience</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3>Cross-Platform</h3>
+          <p>Java & Bedrock players united with seamless cross-play technology and advanced bridging.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>High Performance</h3>
+          <p>Optimized server infrastructure ensuring smooth gameplay with hundreds of concurrent players.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Advanced Security</h3>
+          <p>Enterprise-grade anti-cheat protection and comprehensive moderation tools for fair gameplay.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>Custom Content</h3>
+          <p>Exclusive plugins, custom mobs, unique items, and original gameplay mechanics.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Rank System</h3>
+          <p>Progressive ranking with seasonal rewards, exclusive tags, and special permissions.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Always Updated</h3>
+          <p>Regular content updates, seasonal events, and latest Minecraft version support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Server Info Section -->
+    <section class="server-info-section">
+      <h2 style="color: var(--text-primary); margin-bottom: 1rem;">Ready to Play?</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.2rem;">
+        Join thousands of players on our premium server
+      </p>
+      
+      <div class="server-ip-display">
+        <code class="server-ip">play.legocraft.net</code>
+      </div>
+      
+      <button class="play-button" onclick="copyIP()">
+        <span>🎯</span>
+        Copy IP & Play Now
+      </button>
+      
+      <p style="margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+        Supports Minecraft Java Edition 1.8 - 1.20.x • Bedrock Edition Supported
+      </p>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="content-section">
+      <div class="section-header">
+        <h2>Meet Our Team</h2>
+        <p class="section-subtitle">The passionate developers behind LegoCraft</p>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">AT</div>
+          <h3>ArhamT</h3>
+          <div class="team-role">Founder & Lead Developer</div>
+          <p>Visionary behind LegoCraft with extensive experience in Minecraft server development and community management.</p>
+        </div>
+        
+        <div class="team-card">
+          <div class="team-avatar">AA</div>
+          <h3>AmmarAsif</h3>
+          <div class="team-role">System Administrator</div>
+          <p>Infrastructure expert ensuring optimal server performance, security, and 99.9% uptime reliability.</p>
+        </div>
+        
+        <div class="team-card">
+          <div class="team-avatar">MRT</div>
+          <h3>MRT</h3>
+          <div class="team-role">Plugin Developer</div>
+          <p>Creative mind behind custom plugins and unique gameplay features that make LegoCraft special.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>LegoCraft Network</h3>
+        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+          Premium Minecraft server experience with cutting-edge features, custom content, and an active, friendly community.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Discord">💬</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="YouTube">📺</a>
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home">🏠 Home</a></li>
+          <li><a href="#features">✨ Features</a></li>
+          <li><a href="#servers">🖥️ Servers</a></li>
+          <li><a href="#store">🛒 Store</a></li>
+          <li><a href="#vote">🗳️ Vote</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="#help">❓ Help Center</a></li>
+          <li><a href="#rules">📜 Server Rules</a></li>
+          <li><a href="#status">📊 Server Status</a></li>
+          <li><a href="#contact">📞 Contact Us</a></li>
+          <li><a href="#discord">💬 Discord Support</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 LegoCraft Network. All rights reserved. "Minecraft" is a trademark of Mojang AB.</p>
+      <p style="margin-top: 0.5rem;">Built with ❤️ for the Minecraft community</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

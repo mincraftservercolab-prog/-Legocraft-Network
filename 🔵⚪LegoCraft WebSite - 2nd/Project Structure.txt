@@ -1,0 +1,16 @@
+legocraft-website/
+├── index.html                 # Main HTML file
+├── styles/                   # CSS stylesheets
+│   ├── main.css             # Core styles and layout
+│   ├── components.css       # Component-specific styles
+│   └── animations.css       # Animations and keyframes
+├── scripts/                 # JavaScript files
+│   ├── main.js             # Main application logic
+│   ├── particles.js        # Particles background
+│   └── animations.js       # Advanced animations
+├── images/                 # Image assets
+│   ├── logo.png
+│   ├── favicon.ico
+│   └── social/
+├── README.md               # Project documentation
+└── package.json           # Node.js dependencies
